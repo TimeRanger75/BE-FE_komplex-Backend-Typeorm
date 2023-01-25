@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { Drives } from './drives.entity';
 
 @Module({
   imports: [
@@ -10,9 +11,10 @@ import { AppService } from './app.service';
       host: 'localhost',
       username: 'root',
       password: '',
-      database: 'database',
+      database: 'tarhely_orm',
       entities: [
         /* List of entities here */
+        Drives
       ],
       synchronize: true,
     }),
